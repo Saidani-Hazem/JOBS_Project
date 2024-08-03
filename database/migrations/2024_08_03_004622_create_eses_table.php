@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->String('Name');
-            $table->String('phone');
-            $table->String('Place');
-            $table->String('Email');
-            $table->String('logo');
+            $table->String('phone')->nullable();
+            $table->String('Place')->nullable();
+            $table->String('Email')->unique();
+            $table->String('logo')->nullable();
             $table->String('Domaine');
             $table->String('passwrod');
         });
