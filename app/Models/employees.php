@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class employees extends Model
 {
-    protected $table = '';
+   
     
     use HasFactory;
 

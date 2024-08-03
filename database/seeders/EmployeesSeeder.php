@@ -12,6 +12,6 @@ class EmployeesSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        
     }
 }

@@ -26,7 +26,7 @@ class EseFactory extends Factory
             'Email' => fake()->safeEmail(),
             'logo' => fake()->imageUrl(450, 450, 'logo', true),
             'Domaine' => fake()->bs(),
-            'password' => static::$password ??= Hash::make('password')
+            'passwrod' => static::$password ??= Hash::make('password')
         ];
     }
 }
