@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('emp_id');
             $table->foreignId('job_id');
             $table->foreign('emp_id')->references('employees')->on('id');
-            $table->foreign('job_id')->references('jobs')->on('id');
+            $table->foreign('job_id')->references('Posts')->on('id');
         });
     }
 
