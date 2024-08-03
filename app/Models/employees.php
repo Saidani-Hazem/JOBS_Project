@@ -10,4 +10,12 @@ class employees extends Model
     protected $table = '';
     
     use HasFactory;
+
+
+public function applied(){
+    return $this->hasMany(applied::class);
+}
+
+
+
 }

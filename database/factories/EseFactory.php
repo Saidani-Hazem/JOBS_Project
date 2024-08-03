@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,6 +10,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class EseFactory extends Factory
 {
+
+    protected static ?string $password;
     /**
      * Define the model's default state.
      *
@@ -17,7 +20,13 @@ class EseFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'Name' => fake()->company(),
+            'Phone' => fake()->e164PhoneNumber(),
+            'Place' => fake()->country(),
+            'Email' => fake()->safeEmail(),
+            'logo' => fake()->imageUrl(450, 450, 'logo', true),
+            'Domaine' => fake()->bs(),
+            'password' => static::$password ??= Hash::make('password')
         ];
     }
 }

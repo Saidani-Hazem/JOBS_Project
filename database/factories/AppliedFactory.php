@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Posts;
+use App\Models\employees;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,9 @@ class AppliedFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+           'emp_id'=>employees::get('id')->random(),
+           'job_id'=>Posts::get('id')->random(),
+           'created_at'=>now()
         ];
     }
 }

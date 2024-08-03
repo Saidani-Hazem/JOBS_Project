@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Posts extends Model
 {
     use HasFactory;
+
+
+    public function ese(){
+        return $this->belongsTo(ese::class);
+    }
+
+
 }

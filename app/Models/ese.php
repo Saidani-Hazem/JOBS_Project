@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class ese extends Model
 {
     use HasFactory;
+
+
+
+public function Posts(){
+    return $this->hasMany(Posts::class);
+}
+
+public function applied(){
+    return $this->hasMany(applied::class);
+}
+
+
+
+
 }
