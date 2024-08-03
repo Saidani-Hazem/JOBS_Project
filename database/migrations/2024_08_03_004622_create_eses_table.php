@@ -14,6 +14,13 @@ return new class extends Migration
         Schema::create('eses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->String('Name');
+            $table->String('phone');
+            $table->String('Place');
+            $table->String('Email');
+            $table->String('logo');
+            $table->String('Domaine');
+            $table->String('passwrod');
         });
     }
 

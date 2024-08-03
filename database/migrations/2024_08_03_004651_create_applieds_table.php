@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('applieds', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('emp_id');
+            $table->foreignId('job_id');
+            $table->foreign('emp_id')->references('employees')->on('id');
+            $table->foreign('job_id')->references('jobs')->on('id');
         });
     }
 

@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('ese_id');
+            $table->String('job_Name');
+            $table->String('Type')->nullable();
+            $table->String('Price')->nullable();
+            $table->String('Description')->nullable();
+            $table->foreign('ese_id')->references('id')->on('eses');
         });
     }
 
