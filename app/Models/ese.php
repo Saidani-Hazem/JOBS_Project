@@ -15,6 +15,7 @@ public function Posts(){
     return $this->hasMany(Posts::class);
 }
 
+
 public function applied(){
     return $this->hasMany(applied::class);
 }
